@@ -7,51 +7,162 @@
 
         <link rel="stylesheet" href="./css/style.css" />
     </head>
-    <body>
-        <div class="container-form">
+    <body style="background-color: whitesmoke">
+        <!-- Bấm vào label cũng focus vào input tương ứng -->
+        <!-- Bỏ check chính tả tại các input nhập dạng text/email/phone… -->
+        <!-- Bỏ tự động hoàn thành (Auto complete) cho form -->
+        <form class="form" autocomplete="off">
+            <h1>Register</h1>
             <div class="form-group">
-                <div class="">
-                    <label for="display-name">Display Name</label>
-                    <input
-                        id="display-name"
-                        type="text"
-                        placeholder="Display Name"
-                    />
+                <label for="name" class="form-label">Tên hiển thị</label>
+                <input
+                    type="text"
+                    placeholder="Display Name"
+                    name=""
+                    id="name"
+                    spellcheck="false"
+                />
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Địa chỉ email</label>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    name=""
+                    id="email"
+                    spellcheck="false"
+                />
+            </div>
+            <div class="form-group">
+                <label for="phone-number" class="form-label"
+                    >Số điện thoại</label
+                >
+                <input
+                    type="text"
+                    placeholder="Phone number"
+                    name="phone-number"
+                    id="phone-number"
+                    spellcheck="false"
+                />
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    id="password"
+                />
+            </div>
+            <div class="form-group">
+                <label for="password-2" class="form-label"
+                    >Nhập lại mật khẩu</label
+                >
+                <input
+                    type="password"
+                    placeholder="Password confirm"
+                    name="password-2"
+                    id="password-2"
+                />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Giới tính</label>
+                <div class="form-gender">
+                    <label for="male"
+                        ><input
+                            type="radio"
+                            name="gender"
+                            id="male"
+                            checked
+                        />Nam
+                    </label>
+                    <label for="female"
+                        ><input type="radio" name="gender" id="female" />Nữ
+                    </label>
+                    <label for="other"
+                        ><input type="radio" name="gender" id="other" />Khác
+                    </label>
                 </div>
-                <div class="">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="Email" />
-                </div>
-                <div class="">
-                    <label for="phone-number">Phone Number</label>
-                    <input
-                        id="phone-number"
-                        type="text"
-                        placeholder="Phone Number"
-                    />
-                </div>
-                <div class="">
-                    <label for="password">Password</label>
-                    <input
-                        id="password"
-                        type="password"
-                        placeholder="password"
-                    />
-                </div>
-                <div class="">
-                    <label for="">Gender</label>
-                    <input type="radio" /><label for="">Nam</label>
-                    <input type="radio" /><label for="">Nữ</label>
-                    <input type="radio" name="Khác" id="" /><label for=""
-                        >Khác</label
+            </div>
+            <div class="form-group">
+                <label for="birthday" class="form-label"
+                    >Ngày tháng năm sinh</label
+                >
+                <input type="date" name="birthday" id="birthday" />
+            </div>
+            <div class="form-group">
+                <label for="address" class="form-label">Địa chỉ hiện tại</label>
+                <input
+                    type="text"
+                    placeholder="address"
+                    name="address"
+                    id="address"
+                    spellcheck="false"
+                />
+            </div>
+            <div class="form-group">
+                <label for="avatar" class="form-label">
+                    <p>Ảnh đại diện của bạn</p>
+                    <img src="./img/avatar.png" alt="avatar" />
+                </label>
+
+                <input
+                    type="file"
+                    name="avatar"
+                    id="avatar"
+                    hidden
+                    accept="image/*"
+                />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Chọn loại email bạn muốn nhận:</label>
+                <div class="form-references">
+                    <label for="subscribe-to-ewsletter"
+                        ><input
+                            type="checkbox"
+                            name="references"
+                            id="subscribe-to-ewsletter"
+                        />Nhận bản tin định kỳ</label
+                    >
+                    <label for="receive-promotional-emails"
+                        ><input
+                            type="checkbox"
+                            name="references"
+                            id="receive-promotional-emails"
+                        />Nhận thông tin khuyến mãi</label
+                    >
+                    <label for="get-product-updates"
+                        ><input
+                            type="checkbox"
+                            name="references"
+                            id="get-product-updates"
+                        />Nhận cập nhật sản phẩm mới</label
                     >
                 </div>
-                <div class=""><label for=""></label><input type="text" /></div>
-                <div class=""><label for=""></label><input type="text" /></div>
-                <div class=""><label for=""></label><input type="text" /></div>
-                <div class=""><label for=""></label><input type="text" /></div>
-                <div class=""><label for=""></label><input type="text" /></div>
             </div>
-        </div>
+            <div class="form-group submit">
+                <input id="submit" type="submit" value="Register" />
+            </div>
+        </form>
     </body>
 </html>
+
+<!-- Display Name -->
+
+<!-- Email -->
+
+<!-- Phone number -->
+
+<!-- Password -->
+
+<!-- Confirm Password -->
+
+<!-- Gender -->
+
+<!-- Date of Birth -->
+
+<!-- Address -->
+
+<!-- Profile Picture (Avatar) -->
+
+<!-- Communication Preferences -->
