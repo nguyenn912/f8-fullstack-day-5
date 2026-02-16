@@ -103,5 +103,27 @@ body {
     font-weight: 700;
 }
 /* -------------------- MENU -------------------- */
+.container-menu {
+    background-color: #3e5cca;
+    padding: 0 56px;
+    font-size: 0;
+}
+
+.container-menu li {
+    display: inline-block;
+}
+
+.container-menu li a {
+    display: inline-block;
+    padding: 32px;
+    color: #e7edf3;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.container-menu .active a {
+    background-color: #eeeeee;
+    color: #111111;
+}
 
 /* -------------------- FORM -------------------- */
