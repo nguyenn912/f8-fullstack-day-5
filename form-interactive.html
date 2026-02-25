@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Interactive</title>
+
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body style="background-color: whitesmoke">
+        <!-- Bấm vào label cũng focus vào input tương ứng -->
+        <!-- Bỏ check chính tả tại các input nhập dạng text/email/phone… -->
+        <!-- Bỏ tự động hoàn thành (Auto complete) cho form -->
+        <form class="form-interactive" autocomplete="off">
+            <h1>Register</h1>
+            <div class="form-group">
+                <label for="name" class="form-label requied"
+                    >Tên hiển thị</label
+                >
+                <input
+                    type="text"
+                    placeholder="Display Name"
+                    name=""
+                    id="name"
+                    spellcheck="false"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label requied"
+                    >Địa chỉ email</label
+                >
+                <input
+                    type="email"
+                    placeholder="Email"
+                    name=""
+                    id="email"
+                    spellcheck="false"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="phone-number" class="form-label requied"
+                    >Số điện thoại</label
+                >
+                <input
+                    type="tel"
+                    placeholder="Phone number"
+                    name="phone-number"
+                    id="phone-number"
+                    spellcheck="false"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label requied"
+                    >Mật khẩu</label
+                >
+                <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    id="password"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="password-2" class="form-label requied"
+                    >Nhập lại mật khẩu</label
+                >
+                <input
+                    type="password"
+                    placeholder="Password confirm"
+                    name="password-2"
+                    id="password-2"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label class="form-label requied">Giới tính</label>
+                <div class="form-gender">
+                    <label for="male"
+                        ><input
+                            type="radio"
+                            name="gender"
+                            id="male"
+                            checked
+                        />Nam
+                    </label>
+                    <label for="female"
+                        ><input type="radio" name="gender" id="female" />Nữ
+                    </label>
+                    <label for="other"
+                        ><input type="radio" name="gender" id="other" />Khác
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="birthday" class="form-label requied"
+                    >Ngày tháng năm sinh</label
+                >
+                <input type="date" name="birthday" id="birthday" />
+            </div>
+            <div class="form-group">
+                <label for="address" class="form-label requied"
+                    >Địa chỉ hiện tại</label
+                >
+                <input
+                    type="text"
+                    placeholder="Address"
+                    name="address"
+                    id="address"
+                    spellcheck="false"
+                />
+            </div>
+            <div class="form-group">
+                <label for="avatar" class="form-label">
+                    <p>Ảnh đại diện của bạn</p>
+                    <img src="./img/avatar.png" alt="avatar" />
+                </label>
+
+                <input
+                    type="file"
+                    name="avatar"
+                    id="avatar"
+                    hidden
+                    accept="image/*"
+                />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Chọn loại email bạn muốn nhận:</label>
+                <div class="form-references">
+                    <label for="subscribe-to-ewsletter"
+                        ><input
+                            type="checkbox"
+                            name="references"
+                            id="subscribe-to-ewsletter"
+                        />Nhận bản tin định kỳ</label
+                    >
+                    <label for="receive-promotional-emails"
+                        ><input
+                            type="checkbox"
+                            name="references"
+                            id="receive-promotional-emails"
+                        />Nhận thông tin khuyến mãi</label
+                    >
+                    <label for="get-product-updates"
+                        ><input
+                            type="checkbox"
+                            name="references"
+                            id="get-product-updates"
+                        />Nhận cập nhật sản phẩm mới</label
+                    >
+                </div>
+            </div>
+            <div class="form-group submit">
+                <input id="submit" type="submit" value="Register" />
+            </div>
+        </form>
+    </body>
+</html>
