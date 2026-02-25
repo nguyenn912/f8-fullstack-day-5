@@ -411,3 +411,165 @@ body {
     border-radius: 2px;
     cursor: pointer;
 }
+
+/* -------------------- Blog Post -------------------- */
+
+.blog-container {
+    max-width: 800px;
+    margin: 10px auto;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Tùy chỉnh ::selection để thay đổi màu khi người dùng bôi đen văn bản */
+.blog-container::selection {
+    background-color: #92c5ce;
+}
+
+/* Dùng :not() để áp dụng style cho tất cả heading ngoại trừ h1 */
+.blog-container .heading:not(h1) {
+    text-decoration: underline;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.blog-meta {
+    color: #777;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+.blog-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-content {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.blog-content h2 {
+    font-weight: 700;
+}
+
+/* Sử dụng ::first-letter để tạo kiểu drop cap (chữ cái đầu lớn) cho đoạn văn đầu tiên */
+.blog-content p:first-child::first-letter {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c3a39f;
+}
+
+/* Sử dụng ::first-line để làm nổi bật dòng đầu tiên của mỗi đoạn */
+.blog-content p::first-line {
+    text-decoration: underline;
+    background-color: #40ed7f;
+}
+
+/* Sử dụng :nth-of-type() để tạo kiểu khác nhau cho các phần tử cùng loại */
+.blog-content p:nth-of-type(odd) {
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.blog-content p:nth-of-type(even) {
+    background: #f1f7ff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.blog-quote {
+    border-left: 4px solid #0984e3;
+    background: #f1f7ff;
+    padding: 12px 16px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #2d3436;
+    border-radius: 6px;
+}
+
+/* Sử dụng ::before để thêm dấu ngoặc kép trang trí cho các đoạn trích dẫn (nội dung cần bổ sung đoạn trích dẫn blockquote) */
+.blog-quote::before {
+    content: '"';
+}
+
+.blog-quote::after {
+    content: '"';
+}
+
+/* comments */
+
+.comments-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.comment {
+    margin-bottom: 16px;
+    font-size: 0;
+}
+
+/* Tạo phần comment với hiệu ứng hover cho từng comment */
+.comment:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-body {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 52px);
+    margin-left: 12px;
+    background: #f1f2f6;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+}
+
+.comment-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* form */
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.comment-form button {
+    background: #0984e3;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background: #0873c4;
+}
