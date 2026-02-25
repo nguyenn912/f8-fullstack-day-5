@@ -186,3 +186,48 @@ body {
     padding: 8px 4px;
     cursor: pointer;
 }
+
+/* -------------------- Menu Enhanced -------------------- */
+
+.container-menu-enhanced {
+    background-color: #3e5cca;
+    padding: 0 56px;
+    font-size: 0;
+}
+
+/* active */
+.container-menu-enhanced:active {
+    border-top: 3px solid #c3a39f;
+    border-bottom: 3px solid #c3a39f;
+}
+
+.container-menu-enhanced li {
+    color: #e7edf3;
+    display: inline-block;
+    height: 72px;
+    border-left: 1px solid red;
+}
+
+.container-menu-enhanced li:last-child {
+    border-right: 1px solid red;
+}
+
+.container-menu-enhanced li a {
+    display: inline-block;
+    padding: 28px;
+    background-color: #3e5cca;
+    color: #e7edf3;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container-menu-enhanced li a::before {
+    content: "❤️";
+}
+
+.container-menu-enhanced li:hover,
+.container-menu-enhanced li a:hover {
+    background-color: #eeeeee;
+    color: #111111;
+}
